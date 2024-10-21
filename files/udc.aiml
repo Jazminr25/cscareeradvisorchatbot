@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+    <pattern>*</pattern>
+    <template>I'm Sorry, I don't understand. Do you need help picking a career? </template>
+  </category>
+  
+  <category>
+    <pattern>Hello</pattern>
+    <template>Hello, I am Computer Science Career adivisor. Do you need help picking a career? </template>
+  </category>
+  
+    <category>
+    <pattern>Hi</pattern>
+    <template>Hi, I am Computer Science Career adivisor. Do you need help picking a career? </template>
+  </category>
+  
+  <category>
+      <pattern>no</pattern>
+      <template>I'm sorry I could not help.Please schedule an appointment with your counselor for more help. If you change your mind and need a career, say Yes. </template>
+  </category>
+  
+  <category>
+      <pattern>Yes</pattern>
+      <template>
+          <card>
+              <image>https://t4.ftcdn.net/jpg/03/10/13/39/360_F_310133904_c1MwVB5kaY2EepoOVxLUR3uTFGgCRI3t.jpg</image>
+              <title>Great! Let's get started..</title>
+              <button>
+                  <text>Continue</text>
+                  <postback>QA</postback>
+              </button>
+          </card>
+      </template>
+  </category>
+
+
+</aiml>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>QA</pattern>
+	    <template>What is your name (Please type "My name is (your name)"?</template>
+    </category>
+	
+	<category>
+        <pattern>MY NAME IS * </pattern>
+        <template>Nice to meet you, <star/>! Do you like programming?<think><set name="username"><star/></set></think>
+        <button>
+            <text>yes</text>
+            <postback>yp</postback>
+        </button>
+        <button>
+            <text>no</text>
+            <postback>np</postback>
+        </button>
+        </template>
+    </category>
+    
+<category>
+    <pattern>np</pattern>
+    <template> Do you like working with user interfaces?
+        <button>
+            <text>yes</text>
+            <postback>UX</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>cvsd</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>yp</pattern>
+    <template> Do you enjoy building the visual elements?
+        <button>
+            <text>yes</text>
+            <postback>frontend</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>backend</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>cvsd</pattern>
+    <template> Do you enjoy working more with data or security issues?
+        <button>
+            <text>Data</text>
+            <postback>data</postback>
+        </button>
+        <button>
+            <text>Security Issues</text>
+            <postback>cybersecurity</postback>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>UX</pattern>
+    <template>
+      It sounds like you could be a UX Designer! Here's a Udemy course to learn more about UX Design: <br />
+      <a href="https://www.udemy.com/course/complete-web-designer-mobile-designer-zero-to-mastery/?couponCode=LEARNNOWPLANS">UX Design Masterclass</a>
+    </template>
+</category>
+
+<category>
+    <pattern>data</pattern>
+      <template>
+        You might be interested in Data Science! Here's a Udemy course to explore this career: <br />
+        <a href="https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp/?couponCode=LEARNNOWPLANS">Data Science Bootcamp</a>
+      </template>
+</category>
+
+<category>
+    <pattern>cybersecurity</pattern>
+    <template>
+        Cybersecurity Analyst might be the right path for you! Here's a Udemy course to get you started: <br />
+        <a href="https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/?couponCode=LEARNNOWPLANS">Complete Cybersecurity Course</a>
+      </template>
+</category>
+
+<category>
+    <pattern>frontend</pattern>
+          <template>
+        You could be a Frontend Developer! Here's a Udemy course to help you get started: <br />
+        <a href="https://www.udemy.com/course/front-end-web-development-complete-guide-step-by-step/?couponCode=LEARNNOWPLANS">Frontend Web Development</a>
+      </template>
+</category>
+
+<category>
+    <pattern>backend</pattern>
+      <template>
+        You might enjoy being a Backend Developer! Here's a Udemy course for you: <br />
+        <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=LEARNNOWPLANS">Backend Web Development</a>
+      </template>
+</category>
+    
+    <category>
+        <pattern>Thank you^</pattern>
+        <template>You are welcome! If you faced any issues or need more help, email your counselor.</template>
+    </category>
+</aiml>
